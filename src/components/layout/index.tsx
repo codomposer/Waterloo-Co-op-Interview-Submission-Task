@@ -19,7 +19,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     >
       <Header />
       <SkeletonTheme baseColor="#202020" highlightColor="#444">
-        <div className="mx-auto w-[1100px]">{children}</div>
+        <div className="mx-auto px-3 md:w-[650px] lg:w-[900px] xl:w-[1100px]">
+          {children}
+        </div>
       </SkeletonTheme>
       <Footer />
     </div>

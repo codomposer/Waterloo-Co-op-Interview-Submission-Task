@@ -23,9 +23,31 @@ const config: Config = {
         modalBgColor: "#101010",
         buttonBorderColor: "#383838",
         borderColor: "#1b1b1b",
+        separateColor: "#474545",
         lightBgColor: "#2a2a2a",
       },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
     },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1440px",
+    }
   },
   plugins: [],
 };
