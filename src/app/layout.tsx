@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from "next";
-// import { SpeedInsights } from "@vercel/speed-insights/next"
-// import { Analytics } from "@vercel/analytics/next"
-// import { ToastContainer } from "react-toastify"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
+import { ToastContainer } from "react-toastify";
 
 import Provider from "@/context/provider";
 import Layout from "@/components/layout";
 
 import "./globals.css";
-// import "react-toastify/dist/ReactToastify.css"
+import "react-toastify/dist/ReactToastify.css";
 
 const APP_NAME = "Interview Task";
 const APP_DEFAULT_TITLE = "interview submission task";
@@ -77,10 +77,10 @@ export default function RootLayout({
       <body>
         <Provider>
           <Layout>{children}</Layout>
-          {/* <ToastContainer theme="dark" style={{ zIndex: "100" }} /> */}
+          <ToastContainer theme="dark" style={{ zIndex: "100" }} />
         </Provider>
-        {/* <SpeedInsights />
-        <Analytics /> */}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
