@@ -16,18 +16,24 @@
   }
 }
 
+html {
+  @apply h-full;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply !bg-bgColor !text-white;
+}
+
+p {
+  @apply !leading-[1.2];
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .anim {
+    @apply transition-all duration-150 ease-in-out;
   }
 }
